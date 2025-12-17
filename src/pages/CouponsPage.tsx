@@ -1,16 +1,14 @@
 import Sidebar from "@components/Sidebar";
 import { useContext, useState, useEffect } from "react";
-import { AuthContext } from "@contexts/AuthContext";
 import { HomeTabsContext } from "@contexts/HomeTabsContext";
 import CouponItem from "@components/ui/CouponItem"
 import getCouponList from "@services/marketplace/getCouponList";
 import Loader from "@components/ui/Loader";
 
 function CouponsPage() {
-  const { isVisitor } = useContext(AuthContext)!;
   const { setCurrentScreen } = useContext(HomeTabsContext)!;
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [, setErrorMessage] = useState<string | null>(null);
 
   setCurrentScreen("coupons")
 

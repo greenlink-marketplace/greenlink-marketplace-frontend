@@ -1,4 +1,4 @@
-import { createContext, useState, useCallback } from "react";
+import { createContext, useState } from "react";
 import type { ReactNode } from "react";
 import postTokenObtainPair from "@services/accounts/postTokenObtainPair";
 import setHeaderAuthorization from "@services/headerAuthorization";

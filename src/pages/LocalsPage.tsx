@@ -1,6 +1,5 @@
 import Sidebar from "@components/Sidebar";
 import { useContext } from "react";
-import { AuthContext } from "@contexts/AuthContext";
 import { HomeTabsContext } from "@contexts/HomeTabsContext";
 
 import { useEffect, useState } from "react";
@@ -30,7 +29,6 @@ L.Icon.Default.mergeOptions({
 
 
 function LocalsPage() {
-  const { isVisitor } = useContext(AuthContext)!;
   const { setCurrentScreen } = useContext(HomeTabsContext)!;
 
   const [position, setPosition] = useState<[number, number] | null>(null);

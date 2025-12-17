@@ -14,11 +14,11 @@ function ExplorerPage() {
 
   const [products, setProducts] = useState<ProductPagination[]>([]);
   const [isLoading, setIsLoading] = useState<boolean>(true);
-  const [urlNextPage, setUrlNextPage] = useState<string | null>(null);
+  const [, setUrlNextPage] = useState<string | null>(null);
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [searching, setSearching] = useState<boolean>(false);
 
-  const [errorMessage, setErrorMessage] = useState<string | null>(null);
+  const [errorMessage, ] = useState<string | null>(null);
 
   async function searchProduct() {
     setIsLoading(true)
@@ -78,7 +78,7 @@ function ExplorerPage() {
   }
 
 
-  function handleScroll(e: React.UIEvent<HTMLDivElement>) {
+  // function handleScroll(e: React.UIEvent<HTMLDivElement>) {
     // const target = e.currentTarget;
 
     // const reachedBottom =
@@ -87,7 +87,7 @@ function ExplorerPage() {
     // if (reachedBottom) {
     //   fetchProducts();
     // }
-  }
+  // }
 
   useEffect(() => {
     setCurrentScreen("explorer");
@@ -110,7 +110,7 @@ function ExplorerPage() {
         {/* Área rolável */}
         <div
           className="flex-1 overflow-y-auto p-5"
-          onScroll={handleScroll}
+          // onScroll={handleScroll}
         >
           <SearchBar
             isVisitor={isVisitor}

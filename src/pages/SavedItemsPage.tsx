@@ -2,7 +2,6 @@ import Sidebar from "@components/Sidebar";
 import { useContext, useState, useEffect } from "react";
 import { AuthContext } from "@contexts/AuthContext";
 import { HomeTabsContext } from "@contexts/HomeTabsContext";
-import { useNavigate } from "react-router-dom";
 import ProductItem from "@components/ui/ProductItem";
 import getSavedProductsList from "@services/marketplace/getSavedProductsList";
 import Loader from "@components/ui/Loader";
@@ -10,7 +9,6 @@ import Loader from "@components/ui/Loader";
 function SavedItemsPage() {
   const { isVisitor } = useContext(AuthContext)!;
   const { setCurrentScreen } = useContext(HomeTabsContext)!;
-  const navigate = useNavigate();
 
   setCurrentScreen("saved-items")
 
