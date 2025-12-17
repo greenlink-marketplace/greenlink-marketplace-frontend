@@ -1,0 +1,1 @@
+export type SidebarItemType = "explorer" | "saved-items" | "coupons" | "history" | "locals";

@@ -65,7 +65,60 @@ http://localhost:5173/
 
 ```bash
 src/
- ├── .../
+├── assets/                 # Imagens, ícones, fontes e arquivos estáticos
+│   ├── images/
+│   ├── icons/
+│   └── logos/
+│
+├── components/             # Componentes reutilizáveis (botões, inputs, modais, etc.)
+│   ├── ui/                 # Componentes básicos de interface (atoms)
+│   ├── layout/             # Header, Footer, Navbar, Sidebar, etc.
+│   └── common/             # Cards, badges, listas, etc.
+│
+├── pages/                  # Páginas e views principais da aplicação
+│   ├── auth/               # Login, Registro, Recuperar Senha
+│   ├── home/               # Página inicial / Marketplace
+│   ├── products/           # Listagem e detalhes de produtos sustentáveis
+│   ├── dashboard/          # Painel do usuário, empresa ou reciclador
+│   ├── profile/            # Edição de perfil
+│   └── not-found/          # Página 404
+│
+├── hooks/                  # Hooks customizados (useAuth, useFetch, etc.)
+│
+├── context/                # Contextos globais (AuthContext, ThemeContext, etc.)
+│
+├── services/               # Comunicação com a API (Axios configs e endpoints)
+│   ├── api.ts              # Configuração base do Axios
+│   ├── authService.ts      # Endpoints de autenticação
+│   ├── userService.ts      # Endpoints de usuários
+│   └── productService.ts   # Endpoints de produtos
+│
+├── routes/                 # Definição das rotas e controle de acesso
+│   ├── index.tsx           # Roteador principal
+│   ├── ProtectedRoute.tsx  # Protege rotas autenticadas
+│   └── PublicRoute.tsx
+│
+├── store/                  # Estado global (Zustand, Redux Toolkit, ou Context API)
+│   ├── authStore.ts
+│   └── uiStore.ts
+│
+├── styles/                 # Estilos globais (Tailwind base, variáveis, etc.)
+│   ├── index.css
+│   └── theme.ts
+│
+├── utils/                  # Funções utilitárias e helpers
+│   ├── formatDate.ts
+│   ├── formatCurrency.ts
+│   └── validateEmail.ts
+│
+├── types/                  # Tipos e interfaces TypeScript
+│   ├── user.ts
+│   ├── product.ts
+│   └── auth.ts
+│
+├── App.tsx                 # Componente raiz
+├── main.tsx                # Ponto de entrada da aplicação
+└── vite-env.d.ts
 ```
 
 ---
